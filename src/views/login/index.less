@@ -1,0 +1,115 @@
+@import '../../style/common.less';
+
+.login-container {
+    display: block;
+    position: relative;
+    height: 100%;
+
+    > .wel-container {
+        display: block;
+        position: relative;
+        padding-top: 20vh;
+        > .title {
+            &::before {
+                content: '';
+                display: block;
+                margin: auto;
+                width: 80px;
+                height: 80px;
+                background: url(../../images/logo-en.png) center center / 64px 64px no-repeat;
+            }
+            span,
+            em {
+                display: block;
+                font-size: 1.1rem;
+                color: @primary;
+                text-align: center;
+            }
+
+            em {
+                font-style: normal;
+                font-size: .7rem;
+            }
+        }
+        .van-circle {
+            display: block;
+            position: absolute;
+            top: .8rem;
+            right: .8rem;
+            width: 36px;
+            height: 36px;
+        }
+
+        &.login {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            .login-title {
+                display: block;
+                font-size: 1rem;
+                color: @primary;
+                text-align: center;
+                line-height: 32px;
+                margin-bottom: 46px;
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: auto;
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 8px;
+                    background: url(../../images/logo-en.png) center center / 32px 32px no-repeat;
+                }
+            }
+
+            .login-item {
+                display: flex;
+                height: 56px;
+                padding: 17px 0 7px;
+                border-bottom: solid 1px #ddd;
+                &::before {
+                    content: '';
+                    flex: 0 0 46px;
+                    width: 56px;
+                    height: 32px;
+                    background: url(../../images/default-icon.png) center center / 26px 26px no-repeat;
+                }
+                // 在使用flex的时候，会出现撑破的问题 -- 在flex: 1弹性样式上添加一个width属性即可
+                input {
+                    flex: 1;
+                    width: 0;
+                    height: 32px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: .7rem;
+                }
+                span {
+                    // flex的宽度由flex来决定而不是width
+                    flex: 0 0 120px;
+                    height: 32px;
+                    border-left: solid 1px #ddd;
+                    font-size: .7rem;
+                    color: #999;
+                    text-align: center;
+                    line-height: 32px;
+                }
+            }
+
+            .van-checkbox {
+                margin: 16px 0;
+                font-size: .7rem;
+            }
+        }
+    }
+
+    > .right-info {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 1rem;
+        text-align: center;
+        font-size: .6rem;
+        color: @gray;
+    }
+}

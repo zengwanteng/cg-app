@@ -1,0 +1,13 @@
+@gray: #ccc;
+@primary: #ff5513;
+
+// 定义方法
+.clear() {
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        clear: both;
+    }
+}
